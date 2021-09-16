@@ -9,13 +9,14 @@
     display: flex;
     flex-direction: column;
     width: 100%; 
+    height: 100vh;
 }
 .gallery .gallery__titulo{
     position: absolute;
     top: 30%;
     z-index: 1;
     font-size:5rem;
-    left: 5%;
+    left: 6%;
     color: #000000ca;
 }
 .gallery .gallery__subtitulo{
@@ -23,7 +24,7 @@
     top: 43%;
     z-index: 1;
     font-size:2.3rem;
-    left:6%;
+    left:7%;
     color: #000000ca;
 }
 .gallery__site{
@@ -40,7 +41,7 @@
     box-sizing: border-box;
 }
 .gallery__box--secundary{
-    width: 46.1%;
+    width: 44.6%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,7 +71,7 @@
 }
 .gallery__boton{
     position: absolute;
-    left:85%;
+    left:81%;
     bottom:20%;
     background-color: black;
     color:white;
@@ -83,7 +84,7 @@
 }
 
 /* for-phone-only */
- @media (max-width:599px){
+@media only screen and (max-width: 549px) and (orientation:portrait){
      .gallery{
          display: flex;
          align-items: center;
@@ -120,11 +121,12 @@
 } 
 
 /*for-tablet-portrait-up*/
-@media only screen and (max-width: 899px) and (min-width: 600px) {
+@media only screen and (max-width: 899px) and (min-width: 550px) {
     .gallery{
         height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .gallery__smallBox__img {
         width: 48%;
@@ -134,10 +136,37 @@
         width: 45.6%;
     }
     .gallery__titulo{
-        font-size: 2rem !important;
+        font-size: 4rem !important;
         left:6% !important;
+        position: initial !important;
     }
     .gallery__subtitulo{
         font-size: 1.1rem !important;
+        position: initial !important;
+    }
+    .gallery__boton{
+        font-size: x-small;
+        height: 7% !important;
+    }
+}
+
+/*for-tablet-landscape-up*/
+@media only screen and (max-width: 1199px) and (min-width: 900px) {
+    .gallery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery__titulo, .gallery__subtitulo{
+        position: initial !important;
+    }
+    .gallery__box--secundary{
+        width: 44.3%;
+    }
+    .gallery__boton{
+        width: 5%;
+        height: 7%;
+        left: 81%;
+        bottom: 21%;    
     }
 }
