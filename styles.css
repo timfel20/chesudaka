@@ -108,7 +108,7 @@
     }
     .gallery__boton{
         position:initial !important;
-        width: 13%;
+        width: 50%;
         border-radius: 8px;  
         background-color: rgba(0, 0, 0, 0.726);
     }   
@@ -120,9 +120,24 @@
 } 
 
 /*for-tablet-portrait-up*/
-@media (min-width: 600px){
+@media only screen and (max-width: 899px) and (min-width: 600px) {
+    .gallery{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
     .gallery__smallBox__img {
         width: 48%;
         padding-bottom: 48%;
+    }
+    .gallery__box--secundary{
+        width: 45.6%;
+    }
+    .gallery__titulo{
+        font-size: 2rem !important;
+        left:6% !important;
+    }
+    .gallery__subtitulo{
+        font-size: 1.1rem !important;
     }
 }
