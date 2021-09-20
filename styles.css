@@ -58,6 +58,18 @@
     width:100%;
     padding-bottom: 100%;
 }
+
+.gallery__xlBox__img:hover .gallery__img { 
+    transform: translate(-50%, -50%) scale(1.1);
+    
+}
+.gallery__smallBox__img:hover .gallery__img, .uno, .dos, .tres, .cuatro { 
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+
+
 .gallery__smallBox__img{
     width: 49.6%;
     padding-bottom: 49.6%;
@@ -68,6 +80,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 1s;
 }
 .gallery__boton{
     position: absolute;
@@ -117,7 +130,13 @@
         width: 50%;
         padding-bottom: 50%;
     }
-    
+    .gallery__xlBox__img:hover .gallery__img { 
+        transform: translate(-50%, -50%) scale(1.1);
+        
+    }
+    .gallery__smallBox__img:hover .gallery__img, .uno, .dos, .tres, .cuatro { 
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 } 
 
 /* for-mobile-landscape*/
