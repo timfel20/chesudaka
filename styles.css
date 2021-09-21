@@ -65,7 +65,6 @@
 
 .gallery__xlBox__img:hover .gallery__img { 
     transform: translate(-50%, -50%) scale(1.1);
-    
 }
 .gallery__smallBox__img:hover .gallery__img, .uno, .dos, .tres, .cuatro { 
     transform: translate(-50%, -50%) scale(1.1);
