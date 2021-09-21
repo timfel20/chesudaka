@@ -28,22 +28,32 @@ console.log(gallerySite)
 
 
 
-function printGallery(object){
-    gallerySite.innerHTML+=`<div class ="gallery__box--principal">
-                                <div class ="box gallery__xlBox__img">
-                                    <img class = "gallery__img" src="${object.Img}">
-                                </div>
-                            </div>
-                            <div class ="gallery__box--secundary">    
-                                <div class ="box gallery__smallBox__img">
-                                    <img class = "gallery__img" src="${object.Img}">
-                                </div> 
-                            </div>`
+function printGallery(){
+    gallerySite.innerHTML=
+    `<div class ="gallery__box--principal">
+            <div class ="box gallery__xlBox__img">
+                <img class = "gallery__img" src="${listOfPicture[0].Img}" alt="foto Che sudaka">
+            </div>
+    </div>
+    <div class ="gallery__box--secundary">    
+            <div class ="box gallery__smallBox__img">
+                <img class = "gallery__img uno" src="${listOfPicture[1].Img}" alt="foto Che sudaka">
+            </div>   
+            <div class ="box gallery__smallBox__img">
+                <img class = "gallery__img dos" src="${listOfPicture[2].Img}" alt="foto Che sudaka">
+            </div>
+            <div class ="box gallery__smallBox__img">
+                <img class = "gallery__img tres" src="${listOfPicture[3].Img}" alt="foto Che sudaka">
+            </div>
+            <div class ="box gallery__smallBox__img">
+                <img class = "gallery__img cuatro" src="${listOfPicture[4].Img}" alt="foto Che sudaka">
+            </div>
+    </div>`
 }
 
 function loadGallery(){
     
-    listOfPicture.forEach((object)=> printGallery(object))
+    listOfPicture.forEach((object, index)=> printGallery(object, index))
 };
 
 loadGallery();
