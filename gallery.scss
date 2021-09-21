@@ -62,7 +62,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }
+            transition: all 1s;
+        }    
+    }
+    .gallery__xlBox__img:hover .gallery__img { 
+        transform: translate(-50%, -50%) scale(1.1);
     }
  
  } 
@@ -88,8 +92,12 @@
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
+           transition: all 1s;
        }
    }
+   .gallery__smallBox__img:hover .gallery__img, .uno, .dos, .tres, .cuatro { 
+    transform: translate(-50%, -50%) scale(1.1);
+}
 
 }
     }
