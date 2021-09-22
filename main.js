@@ -13,20 +13,20 @@ function orderPicture(){
     listOfPicture.reverse();
 }
 
+function printObjeto(gallery,galleryBox,photo) {
+    gallery.innerHTML +=`
+    <div class ="box ${galleryBox}">
+        <img class = "gallery__img" src="${photo}" alt="foto Che sudaka">
+    </div>
+    ` 
+}
+
 function printElemento(i,photo){
     if(i==0){
-        galleryPrincipal.innerHTML =`
-                                    <div class ="box gallery__xlBox__img">
-                                        <img class = "gallery__img" src="${photo}" alt="foto Che sudaka">
-                                    </div>
-                                    ` 
+        printObjeto(galleryPrincipal,"gallery__xlBox__img",photo)
     }
     else{
-        gallerySecundary.innerHTML +=`
-                                    <div class ="box gallery__smallBox__img">
-                                        <img class = "gallery__img uno" src="${photo}" alt="foto Che sudaka">
-                                    </div>
-                                    `
+        printObjeto(gallerySecundary,"gallery__smallBox__img",photo)
         }
 }
 
