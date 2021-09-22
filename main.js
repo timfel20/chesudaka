@@ -21,6 +21,8 @@ function printPrincipalPhoto(){
                                 `
 }
 function printSecundaryPhoto(){
+    listOfPicture.pop();
+    listOfPicture.reverse();
     for(let i=0; i<listOfPicture.length;i++){
         let secundaryPhoto = listOfPicture[i]
         
