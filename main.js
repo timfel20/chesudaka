@@ -21,22 +21,23 @@ function printPrincipalPhoto(){
                                 `
 }
 function printSecundaryPhoto(){
-    let secundaryPhoto = listOfPicture.slice(0,4);
-    console.log(secundaryPhoto)
-    gallerySecundary.innerHTML =`
-                                    <div class ="box gallery__smallBox__img">
-                                        <img class = "gallery__img uno" src="${secundaryPhoto.img}" alt="foto Che sudaka">
-                                    </div>
-                                    <div class ="box gallery__smallBox__img">
-                                        <img class = "gallery__img uno" src="${secundaryPhoto.img}" alt="foto Che sudaka">
-                                    </div>
-                                    <div class ="box gallery__smallBox__img">
-                                        <img class = "gallery__img uno" src="${secundaryPhoto.img}" alt="foto Che sudaka">
-                                    </div>
-                                    <div class ="box gallery__smallBox__img">
-                                        <img class = "gallery__img uno" src="${secundaryPhoto.img}" alt="foto Che sudaka">
-                                    </div>
-                                `
+    for(let i=0; i<listOfPicture.length;i++){
+        let secundaryPhoto = listOfPicture[i]
+        
+
+        gallerySecundary.innerHTML += `
+                                        <div class ="box gallery__smallBox__img">
+                                             <img class = "gallery__img uno" src="${secundaryPhoto.img}" alt="foto Che sudaka">
+                                        </div>
+                                    `
+        console.log(secundaryPhoto)
+    }
+    
+  
+        
+    
+    
+
 }
 
 function loadGallery(){
